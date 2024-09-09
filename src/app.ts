@@ -14,9 +14,9 @@ const swaggerOptions = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'Banco API',
+            title: 'AndisBank - Módulo Cuentas',
             version: '1.0.0',
-            description: 'API de un banco para la gestión de usuarios y cuentas',
+            description: 'AndisBank - Módulo Cuentas: para la gestión de usuarios y cuentas',
         },
         servers: [
             {
@@ -25,7 +25,7 @@ const swaggerOptions = {
             }
         ],
     },
-    apis: ['./**/*.ts'], // Revisa esta ruta
+    apis: ['./**/*.ts'], 
 };
 
 
