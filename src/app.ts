@@ -4,19 +4,15 @@ import { accounts } from './data/accounts';
 import { Account, User } from './types';
 
 const app = express();
-
-// Middleware para parsear el cuerpo de las solicitudes JSON
 app.use(express.json());
-
-// Middleware para parsear datos de formularios (si estás usando formularios)
 app.use(express.urlencoded({ extended: true }));
 
-// Prueba
+// Endpoint Prueba
 app.get('/', (req: Request, res: Response) => {
     res.send('Hola');
 });
 
-// Accounts
+// Endpoints Accounts
 // GET /api/accounts
 app.get('/api/accounts', (req, res) => {
     res.json(accounts);
@@ -64,7 +60,7 @@ app.delete('/api/accounts/:id', (req, res) => {
 });
 
 
-// Users
+// Endpoints Users
 
 // GET /api/user
 app.get('/api/user', (req, res) => {
@@ -137,7 +133,7 @@ app.listen(APP_PORT, () => {
     console.log(`Server started on port ${APP_PORT}`);
 });
 
-// Enable CORS
+// CORS
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
